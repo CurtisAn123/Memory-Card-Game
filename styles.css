@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    color: black;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 50px;
+    height: 100px;
+    position: sticky;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.author {
+    font-size: 28px;
+}
+
+.game {
+    display: flex;
+    perspective: 1000px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    float: left;
+    width: 16.66%;
+    height: 0px;
+    padding: 5px;
+    padding-bottom: 16.66%;
+    position: relative;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.img_cover {
+    z-index: 999;
+}
+
+.card.reveal {
+    transform: rotateY(180deg);
+}
+
+.img_cover,
+.img_back {
+    width: 100%;
+    position: absolute;
+    padding: 5px;
+    backface-visibility: hidden;
+}
+
+.img_back {
+    transform: rotateY(180deg);
+}
